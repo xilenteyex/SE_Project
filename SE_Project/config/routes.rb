@@ -1,4 +1,7 @@
 SEProject::Application.routes.draw do
+  resources :child_info
+  root :to => redirect('/child_info')
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
