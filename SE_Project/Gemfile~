@@ -4,10 +4,17 @@ gem 'rails', '3.2.16'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
+<<<<<<< HEAD
+group :development, :test do
+  gem 'sqlite3' 
+  gem 'cucumber'
+  gem 'cucumber-rails', require => false
+=======
 group :developement, :test do
 	gem 'sqlite3'
 	gem 'cucumber'
 	gem 'cucumber-rails', :require => false
+>>>>>>> d0be82a7623332140a3d583860a009e5b9c1fad2
 end
 
 # Gems used only for assets and not required
