@@ -1,0 +1,36 @@
+{
+  "Cucumber Features": {
+    "coverage": {
+      "/home/saasbook/code/seproject/SE_Project/SE_Project/SE_Project/app/controllers/application_controller.rb": [
+        1,
+        1,
+        null
+      ],
+      "/home/saasbook/code/seproject/SE_Project/SE_Project/SE_Project/app/helpers/application_helper.rb": [
+        1,
+        null
+      ],
+      "/home/saasbook/code/seproject/SE_Project/SE_Project/SE_Project/app/controllers/child_info_controller.rb": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "/home/saasbook/code/seproject/SE_Project/SE_Project/SE_Project/app/models/child_info.rb": [
+        1,
+        1,
+        null
+      ]
+    },
+    "timestamp": 1430266046
+  }
+}
