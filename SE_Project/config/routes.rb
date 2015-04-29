@@ -1,4 +1,6 @@
 SEProject::Application.routes.draw do
+  get "welcome/index"
+
   resources :child_info
   root :to => redirect('/child_info')
 

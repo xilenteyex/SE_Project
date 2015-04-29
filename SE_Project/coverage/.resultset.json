@@ -28,9 +28,20 @@
       "/home/saasbook/code/seproject/SE_Project/SE_Project/SE_Project/app/models/child_info.rb": [
         1,
         1,
+        null,
+        1,
+        0,
+        null,
+        null
+      ],
+      "/home/saasbook/code/seproject/SE_Project/SE_Project/SE_Project/app/controllers/welcome_controller.rb": [
+        1,
+        1,
+        null,
+        null,
         null
       ]
     },
-    "timestamp": 1430266410
+    "timestamp": 1430309754
   }
 }
