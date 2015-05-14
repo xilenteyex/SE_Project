@@ -1,0 +1,140 @@
+F.FFFFFFFFFFFFFF
+
+Failures:
+
+  1) ChildInfoController getting the children assigned to a LHW(happy path) should generate routing for children list
+     Failure/Error: { :get => child_info_index_path("Abeera") }.
+       The recognized options <{"action"=>"index", "controller"=>"child_info", "format"=>"Abeera"}> did not match <{"controller"=>"ChildInfo", "action"=>"index", "name"=>"Abeera"}>, difference: <{"controller"=>"ChildInfo", "name"=>"Abeera", "format"=>"Abeera"}>.
+       <{"controller"=>"ChildInfo", "action"=>"index", "name"=>"Abeera"}> expected but was
+       <{"action"=>"index", "controller"=>"child_info", "format"=>"Abeera"}>.
+     # ./spec/controllers/child_info_controller_spec.rb:13:in `block (3 levels) in <top (required)>'
+
+  2) ChildInfoController getting the children assigned to a LHW(happy path) should call model method
+     Failure/Error: ChildInfo.should_receive(:get_children).with('Abeera').and_return(@fake_results)
+       (<ChildInfo(id: integer, name: string, family_number: string, nurse_name: string, date_of_birth: datetime, polio_1: datetime, polio_2: datetime, polio_3: datetime, polio_4: datetime, measles_1: datetime, measles_2: datetime) (class)>).get_children("Abeera")
+           expected: 1 time
+           received: 0 times
+     # ./spec/controllers/child_info_controller_spec.rb:22:in `block (3 levels) in <top (required)>'
+
+  3) ChildInfoController getting the children assigned to a LHW(happy path) should render index template
+     Failure/Error: assigns(:child).should == @fake_results
+       expected: [#<RSpec::Mocks::Mock:0x543c5c4 @name="child1">, #<RSpec::Mocks::Mock:0x543c52e @name="child2">]
+            got: [] (using ==)
+       Diff:
+       @@ -1,3 +1,2 @@
+       -[#<RSpec::Mocks::Mock:0x543c5c4 @name="child1">,
+       - #<RSpec::Mocks::Mock:0x543c52e @name="child2">]
+       +[]
+     # ./spec/controllers/child_info_controller_spec.rb:29:in `block (3 levels) in <top (required)>'
+
+  4) ChildInfoController getting the children assigned to a LHW((sad path) should generate routing for children list
+     Failure/Error: { :get => child_info_index_path("Abeera") }.
+       The recognized options <{"action"=>"index", "controller"=>"child_info", "format"=>"Abeera"}> did not match <{"controller"=>"ChildInfo", "action"=>"index", "name"=>"Abeera"}>, difference: <{"controller"=>"ChildInfo", "name"=>"Abeera", "format"=>"Abeera"}>.
+       <{"controller"=>"ChildInfo", "action"=>"index", "name"=>"Abeera"}> expected but was
+       <{"action"=>"index", "controller"=>"child_info", "format"=>"Abeera"}>.
+     # ./spec/controllers/child_info_controller_spec.rb:40:in `block (3 levels) in <top (required)>'
+
+  5) ChildInfo#name returns the correct title
+     Failure/Error: @Child_Info = ChildInfo.new "name", "family_number", "nurse_name", "date_of_birth", "polio_1", "polio_2", "polio_3", "polio_4", "measles_1", "measles_2"
+     ArgumentError:
+       wrong number of arguments (10 for 2)
+     # ./spec/models/child_info_spec.rb:7:in `new'
+     # ./spec/models/child_info_spec.rb:7:in `block (2 levels) in <top (required)>'
+
+  6) ChildInfo#family_number returns the correct author
+     Failure/Error: @Child_Info = ChildInfo.new "name", "family_number", "nurse_name", "date_of_birth", "polio_1", "polio_2", "polio_3", "polio_4", "measles_1", "measles_2"
+     ArgumentError:
+       wrong number of arguments (10 for 2)
+     # ./spec/models/child_info_spec.rb:7:in `new'
+     # ./spec/models/child_info_spec.rb:7:in `block (2 levels) in <top (required)>'
+
+  7) ChildInfo#nurse_name returns the correct category
+     Failure/Error: @Child_Info = ChildInfo.new "name", "family_number", "nurse_name", "date_of_birth", "polio_1", "polio_2", "polio_3", "polio_4", "measles_1", "measles_2"
+     ArgumentError:
+       wrong number of arguments (10 for 2)
+     # ./spec/models/child_info_spec.rb:7:in `new'
+     # ./spec/models/child_info_spec.rb:7:in `block (2 levels) in <top (required)>'
+
+  8) ChildInfo#date_of_birth returns the correct category
+     Failure/Error: @Child_Info = ChildInfo.new "name", "family_number", "nurse_name", "date_of_birth", "polio_1", "polio_2", "polio_3", "polio_4", "measles_1", "measles_2"
+     ArgumentError:
+       wrong number of arguments (10 for 2)
+     # ./spec/models/child_info_spec.rb:7:in `new'
+     # ./spec/models/child_info_spec.rb:7:in `block (2 levels) in <top (required)>'
+
+  9) ChildInfo#polio_1 returns the correct category
+     Failure/Error: @Child_Info = ChildInfo.new "name", "family_number", "nurse_name", "date_of_birth", "polio_1", "polio_2", "polio_3", "polio_4", "measles_1", "measles_2"
+     ArgumentError:
+       wrong number of arguments (10 for 2)
+     # ./spec/models/child_info_spec.rb:7:in `new'
+     # ./spec/models/child_info_spec.rb:7:in `block (2 levels) in <top (required)>'
+
+  10) ChildInfo#polio_2 returns the correct category
+     Failure/Error: @Child_Info = ChildInfo.new "name", "family_number", "nurse_name", "date_of_birth", "polio_1", "polio_2", "polio_3", "polio_4", "measles_1", "measles_2"
+     ArgumentError:
+       wrong number of arguments (10 for 2)
+     # ./spec/models/child_info_spec.rb:7:in `new'
+     # ./spec/models/child_info_spec.rb:7:in `block (2 levels) in <top (required)>'
+
+  11) ChildInfo#polio_3 returns the correct category
+     Failure/Error: @Child_Info = ChildInfo.new "name", "family_number", "nurse_name", "date_of_birth", "polio_1", "polio_2", "polio_3", "polio_4", "measles_1", "measles_2"
+     ArgumentError:
+       wrong number of arguments (10 for 2)
+     # ./spec/models/child_info_spec.rb:7:in `new'
+     # ./spec/models/child_info_spec.rb:7:in `block (2 levels) in <top (required)>'
+
+  12) ChildInfo#polio_4 returns the correct category
+     Failure/Error: @Child_Info = ChildInfo.new "name", "family_number", "nurse_name", "date_of_birth", "polio_1", "polio_2", "polio_3", "polio_4", "measles_1", "measles_2"
+     ArgumentError:
+       wrong number of arguments (10 for 2)
+     # ./spec/models/child_info_spec.rb:7:in `new'
+     # ./spec/models/child_info_spec.rb:7:in `block (2 levels) in <top (required)>'
+
+  13) ChildInfo#measles_1 returns the correct category
+     Failure/Error: @Child_Info = ChildInfo.new "name", "family_number", "nurse_name", "date_of_birth", "polio_1", "polio_2", "polio_3", "polio_4", "measles_1", "measles_2"
+     ArgumentError:
+       wrong number of arguments (10 for 2)
+     # ./spec/models/child_info_spec.rb:7:in `new'
+     # ./spec/models/child_info_spec.rb:7:in `block (2 levels) in <top (required)>'
+
+  14) ChildInfo#measles_2 returns the correct category
+     Failure/Error: @Child_Info = ChildInfo.new "name", "family_number", "nurse_name", "date_of_birth", "polio_1", "polio_2", "polio_3", "polio_4", "measles_1", "measles_2"
+     ArgumentError:
+       wrong number of arguments (10 for 2)
+     # ./spec/models/child_info_spec.rb:7:in `new'
+     # ./spec/models/child_info_spec.rb:7:in `block (2 levels) in <top (required)>'
+
+  15) ChildInfo#get_children returns the children of the area of specified LHW
+     Failure/Error: @Child_Info = ChildInfo.new "name", "family_number", "nurse_name", "date_of_birth", "polio_1", "polio_2", "polio_3", "polio_4", "measles_1", "measles_2"
+     ArgumentError:
+       wrong number of arguments (10 for 2)
+     # ./spec/models/child_info_spec.rb:7:in `new'
+     # ./spec/models/child_info_spec.rb:7:in `block (2 levels) in <top (required)>'
+
+Finished in 0.61425 seconds
+16 examples, 15 failures
+
+Failed examples:
+
+rspec ./spec/controllers/child_info_controller_spec.rb:12 # ChildInfoController getting the children assigned to a LHW(happy path) should generate routing for children list
+rspec ./spec/controllers/child_info_controller_spec.rb:21 # ChildInfoController getting the children assigned to a LHW(happy path) should call model method
+rspec ./spec/controllers/child_info_controller_spec.rb:25 # ChildInfoController getting the children assigned to a LHW(happy path) should render index template
+rspec ./spec/controllers/child_info_controller_spec.rb:39 # ChildInfoController getting the children assigned to a LHW((sad path) should generate routing for children list
+rspec ./spec/models/child_info_spec.rb:11 # ChildInfo#name returns the correct title
+rspec ./spec/models/child_info_spec.rb:17 # ChildInfo#family_number returns the correct author
+rspec ./spec/models/child_info_spec.rb:23 # ChildInfo#nurse_name returns the correct category
+rspec ./spec/models/child_info_spec.rb:29 # ChildInfo#date_of_birth returns the correct category
+rspec ./spec/models/child_info_spec.rb:35 # ChildInfo#polio_1 returns the correct category
+rspec ./spec/models/child_info_spec.rb:41 # ChildInfo#polio_2 returns the correct category
+rspec ./spec/models/child_info_spec.rb:47 # ChildInfo#polio_3 returns the correct category
+rspec ./spec/models/child_info_spec.rb:53 # ChildInfo#polio_4 returns the correct category
+rspec ./spec/models/child_info_spec.rb:59 # ChildInfo#measles_1 returns the correct category
+rspec ./spec/models/child_info_spec.rb:65 # ChildInfo#measles_2 returns the correct category
+rspec ./spec/models/child_info_spec.rb:71 # ChildInfo#get_children returns the children of the area of specified LHW
+rake aborted!
+/home/saasbook/.rvm/rubies/ruby-1.9.3-p448/bin/ruby -S rspec ./spec/controllers/child_info_controller_spec.rb ./spec/models/child_info_spec.rb failed
+/home/saasbook/.rvm/gems/ruby-1.9.3-p448/gems/rspec-core-2.8.0/lib/rspec/core/rake_task.rb:137:in `block (2 levels) in initialize'
+/home/saasbook/.rvm/gems/ruby-1.9.3-p448/gems/rspec-core-2.8.0/lib/rspec/core/rake_task.rb:127:in `block in initialize'
+/home/saasbook/.rvm/gems/ruby-1.9.3-p448/bin/ruby_executable_hooks:15:in `eval'
+/home/saasbook/.rvm/gems/ruby-1.9.3-p448/bin/ruby_executable_hooks:15:in `<main>'
+
