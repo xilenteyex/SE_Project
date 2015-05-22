@@ -4,9 +4,17 @@ SEProject::Application.routes.draw do
   get "sessions/new"
 
   get "welcome/index"
-
+  get "reports/child_report"
+  get "reports/pregnancy_report" 
+  get "reports/child_report_result" 
+  get "reports/polio_report_result"
+  get "reports/measles_result"
+  get "reports/all_result"
   resources :child_info
   root :to => redirect('/child_info')
+  
+  resources :reports
+  root :to => redirect('/reports')	
 
   resources :child_info
   root :to => redirect('/child_info/new')

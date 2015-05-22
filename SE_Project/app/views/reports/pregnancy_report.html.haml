@@ -1,0 +1,31 @@
+h1 Generate Reports For Children Under LHW
+
+=form_tag("/reports/woman_report", method: "get") do
+  =label_tag 'Enter Information below'
+  %br
+  =label_tag 'Name'
+  =text_field_tag(:woman_name)
+  %br
+  =label_tag 'Family Number'
+  =text_field_tag(:family_number)
+  %br
+  =submit_tag("Submit")
+%br
+
+h2 Generate Reports For Children Under LHW
+
+=form_tag("/reports/child_report_result", method: "get") do
+  =label_tag 'Number of visits'
+  =select_tag "vaccination", "<option>1</option><option>2</option><option>3</option><option>4</option>".html_safe
+  %br
+  =submit_tag("Submit")
+%br
+h3 Generate Reports For Children Under LHW
+
+=form_tag("/reports/child_report_result", method: "get") do
+  =label_tag 'Family Number'
+  =text_field_tag 'name'
+  %br
+  =submit_tag("Submit")
+
+
