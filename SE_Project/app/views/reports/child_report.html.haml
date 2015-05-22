@@ -1,5 +1,4 @@
 %h1 Generate Reports For Children Under LHW
-
 =form_tag("/reports/child_report_result", method: "get") do
   =label_tag 'Enter Information below'
   %br
@@ -12,3 +11,16 @@
   =select_tag "vaccination", "<option>All vaccinations</option><option>Polio</option><option>Measles</option>".html_safe 
   %br
   =submit_tag("Submit")
+%br
+=form_tag("/reports/child_age_report", method: "get") do
+  =label_tag 'Select Age Group'
+  %br
+  =select_tag "age", "<option>Below 6 Months</option><option>12-23 Months</option><option>Below 3 years</option><option>Below 5 years</option>".html_safe
+  =submit_tag("Submit")
+%br
+=form_tag("/reports/vaccine_dose", method: "get") do
+  =label_tag 'Select Dosage Level'
+  %br
+  =select_tag "dose", "<option>Polio 1</option><option>Polio 2</option><option>Polio 3</option><option>Measles 1</option><option>Measles 2</option>".html_safe
+  =submit_tag("Submit")
+

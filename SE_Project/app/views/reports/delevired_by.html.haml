@@ -1,0 +1,13 @@
+%h2 Women
+%table#Women
+  %thead
+    %tr
+      %th Name
+      %th Family
+      %th Delivered At
+  %tbody
+    - @woman.each do |t|
+      %tr
+        %td= t.name
+        %td= t.family_number
+        %td= t.hospital
