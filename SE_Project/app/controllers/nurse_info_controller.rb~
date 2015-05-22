@@ -1,0 +1,9 @@
+class NurseInfoController < ApplicationController
+  def index
+	NurseInfo.all()
+  end
+  def new
+    NurseInfo.create!(:name => params[:name],:cnic => params[:cnic],:rank =>
+ params[:rank], :date_of_birth => "1/1/1")
+  end
+end

@@ -1,0 +1,21 @@
+%h2 Add Nurses to Database
+=form_tag("/nurse_info/new", method: "get") do
+  =label_tag "Enter Nurse Information"
+  %br
+  %br
+  =label_tag "Name"
+  =text_field_tag(:name)
+  %br
+  =label_tag "CNIC"
+  =text_field_tag(:cnic)
+  %br
+  =label_tag "Rank"
+  =text_field_tag(:rank)
+  %br
+  =label_tag "Date of Birth"
+  =text_field_tag(:dob)
+  %br
+  =label_tag "Password"
+  =text_field_tag(:password)
+  %br
+  =submit_tag("Submit")

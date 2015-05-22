@@ -1,0 +1,17 @@
+%h2 Log In
+=form_tag(login_new_path, method: "post") do
+  =label_tag "Enter Nurse Information"
+  %br
+  %br
+  =label_tag "CNIC"
+  =text_field_tag(:cnic)
+  %br
+  =label_tag "Password"
+  =text_field_tag(:password)
+  %br
+  =submit_tag("Log In")
+
+%h3 New User?
+= link_to "Sign up now!", logout_path
+
+= @abc

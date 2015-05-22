@@ -1,0 +1,15 @@
+class SessionsController < ApplicationController
+  def new
+      @abc = "yippi"
+  end
+  def create
+      @abc = "yippi1"
+      flash[:warning] = 'Invalid email/password combination' # Not quite right!
+      render 'new'
+  end
+
+  def destroy
+      render 'new'	
+  end
+
+end

@@ -1,0 +1,13 @@
+%h2 All Nurses
+%table#nurse
+  %thead
+    %tr
+      %th Name
+      %th CNIC
+      %th Rank
+  %tbody
+    - @child.each do |t|
+      %tr
+        %td= t.name
+        %td= t.cnic
+        %td= t.rank

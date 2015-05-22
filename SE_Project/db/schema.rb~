@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20150522145407) do
+ActiveRecord::Schema.define(:version => 20150427104446) do
 
   create_table "child_infos", :force => true do |t|
     t.string   "name"
@@ -24,14 +24,6 @@ ActiveRecord::Schema.define(:version => 20150522145407) do
     t.datetime "polio_4"
     t.datetime "measles_1"
     t.datetime "measles_2"
-  end
-
-  create_table "nurse_infos", :force => true do |t|
-    t.string   "name"
-    t.string   "cnic"
-    t.string   "rank"
-    t.datetime "date_of_birth"
-    t.string   "password"
   end
 
 end

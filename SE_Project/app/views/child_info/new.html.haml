@@ -1,0 +1,36 @@
+%h2 Add Children to Database
+=form_tag("/child_info/new", method: "get") do
+  =label_tag "Enter Child Information"
+  %br
+  %br
+  =label_tag "Name"
+  =text_field_tag(:name)
+  %br
+  =label_tag "Family Number"
+  =text_field_tag(:family)
+  %br
+  =label_tag "Nurse Assigned"
+  =text_field_tag(:nurse)
+  %br
+  =label_tag "Date of Birth"
+  =text_field_tag(:dob)
+  %br
+  =label_tag "First Polio Vaccination"
+  =text_field_tag(:p1)
+  %br
+  =label_tag "Second Polio Vaccination"
+  =text_field_tag(:p2)
+  %br
+  =label_tag "Third Polio Vaccination"
+  =text_field_tag(:p3)
+  %br
+  =label_tag "Fourth Polio Vaccination"
+  =text_field_tag(:p4)
+  %br
+  =label_tag "First Measles Vaccination"
+  =text_field_tag(:m1)
+  %br
+  =label_tag "Second Measles Vaccination"
+  =text_field_tag(:m2)
+  %br
+  =submit_tag("Submit")

@@ -1,6 +1,4 @@
 SEProject::Application.routes.draw do
-  get "nurse_mainpage/show" => 'nurse_mainpage#show'
-
   get "sessions/new"
 
   get "welcome/index"
@@ -17,11 +15,9 @@ SEProject::Application.routes.draw do
   resources :nurse_info
   root :to => redirect('/nurse_info/new')
 
-  get    'all_nurses' => 'nurse_info#show'
   get    'login'   => 'sessions#new'
-  post   'login_new'   => 'sessions#create'
-  #delete 'logout'  => 'sessions#destroy'
-  get 'logout'  => 'sessions#destroy'
+  post   'login'   => 'sessions#create'
+  delete 'logout'  => 'sessions#destroy'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
