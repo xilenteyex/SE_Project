@@ -1,0 +1,21 @@
+!!! 5
+%html
+%head
+  %title SEProject
+  = stylesheet_link_tag    'application', media: 'all'
+  = javascript_include_tag 'application'
+  = csrf_meta_tags
+
+%body
+  - if logged_in?
+    = link_to 'Logout', logout_path
+    = link_to "Dashboard", nurse_mainpage_show_path
+  - else
+    = link_to 'Login', login_path
+    = link_to "Sign Up", nurse_info_new_path
+  = link_to "Home", login_path
+  
+  - flash.each do |name, message|
+    = content_tag :div, message, id: "flash_#{name}"
+
+  = yield

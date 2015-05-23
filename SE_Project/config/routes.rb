@@ -61,12 +61,18 @@ SEProject::Application.routes.draw do
   get 'pregnant_women_info_show' => 'pregnant_women_info#show'
 
   get 'pregnant_women_info_new' => 'pregnant_women_info#new'
+  get 'pregnant_women_info_create' => 'pregnant_women_info#create'
   get 'famliy_planning_info_new' => 'famliy_planning_info#new'
+  get 'famliy_planning_info_create' => 'famliy_planning_info#create'
+
   
   get 'child_info_new' => 'child_info#new'
+  get 'child_info_create' => 'child_info#create'
+
   get 'reports_index' => 'reports#index'
 
   get 'nurse_info_new' => 'nurse_info#new'
+  get 'nurse_info_create' => 'nurse_info#create'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

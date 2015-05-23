@@ -10,7 +10,7 @@ module SessionsHelper
   end
 
   def logged_in?
-    !current_user.nil?
+    !session[:nurse_cnic].blank?
   end
 
   # Logs out the current user.

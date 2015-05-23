@@ -1,30 +1,26 @@
 class SessionsController < ApplicationController
   def new
-      @abc = "yippi"
   end
   def create
-      # @abc = "yippiiii"
-      @abc = params[:cnic]
-      @def = params[:password]
-      user = NurseInfo.find_by_cnic(@abc)
-      if user
-        if user.password == @def
-          log_in user
-          @current_user = user
-          # redirect_to user
-          # redirect_to nurses_info
-          @abc = "success!"
-          # redirect_to :controller => 'nurse_mainpage_controller', :action => 'show'
-          redirect_to nurse_mainpage_show_path
-        end
+      @cnic = params[:cnic]
+      @password = params[:password]
+      user = NurseInfo.find_by_cnic(@cnic)
+      if user and user.password == @password
+        log_in user
+        @current_user = user
+        redirect_to nurse_mainpage_show_path
+      else
+        flash.now[:notice] = 'Incorrect user name and/or password'
+        render 'new'
       end
-      # redirect_to nurses_info
-      # render 'new'
   end
 
   def destroy
-    log_out if logged_in?
-    render 'new'
+    if logged_in?
+      flash[:notice] = 'Successfully logged out of the system. See you soon :)'
+      log_out
+    end
+    redirect_to login_path
     # redirect_to something
   end
 

@@ -13,6 +13,7 @@ class ChildInfoDb < ActiveRecord::Migration
     t.datetime 'polio_4'
     t.datetime 'measles_1'
     t.datetime 'measles_2'
+    t.string 'cnic'
     end
   end
 
