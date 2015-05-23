@@ -1,0 +1,12 @@
+%h2 Family Planning Report
+%br
+=form_tag("/reports/family_planning", method: "get") do
+  =label_tag 'Method of Contraception'
+  %br
+  =select_tag "contra", "<option>Condom</option><option>Pill</option><option>Injection</option><option>Surgery</option>".html_safe
+  %br
+  =label_tag 'Provided by'
+  %br
+  =select_tag "provider", "<option>Any</option><option>Hospital</option><option>LHW</option>".html_safe
+  %br
+  =submit_tag("Submit")

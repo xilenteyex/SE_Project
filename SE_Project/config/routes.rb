@@ -10,10 +10,18 @@ SEProject::Application.routes.draw do
   get "welcome/index"
   get "reports/child_report"
   get "reports/pregnancy_report" 
+  get "reports/family"
   get "reports/child_report_result" 
   get "reports/polio_report_result"
   get "reports/measles_result"
   get "reports/all_result"
+  get "reports/child_age_report"
+  get "reports/vaccine_dose"
+  get "reports/woman_vaccination"
+  get "reports/miscarriages"
+  get "reports/visits"
+  get "reports/delevired_by" 
+  get "reports/family_planning"
   resources :child_info
   root :to => redirect('/child_info')
   

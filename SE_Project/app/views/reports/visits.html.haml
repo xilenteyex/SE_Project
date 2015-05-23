@@ -1,0 +1,17 @@
+%h2 Women
+%table#Women
+  %thead
+    %tr
+      %th Name
+      %th Checkup1
+      %th Checkup2
+      %th Checkup3
+      %th Checkup4
+  %tbody
+    - @woman.each do |t|
+      %tr
+        %td= t.name
+        %td= t.checkup1
+        %td= t.checkup2
+        %td= t.checkup3
+        %td= t.checkup4
