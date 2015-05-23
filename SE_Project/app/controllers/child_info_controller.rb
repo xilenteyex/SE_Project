@@ -24,9 +24,14 @@ class ChildInfoController < ApplicationController
     @cnic = session[:nurse_cnic]
     # redirect_to nurse_mainpage_show_path
     if @cnic
-      ChildInfo.create!(:name => params[:name], :cnic => session[:nurse_cnic], :family_number => params[:family],:nurse_name => params[:nurse], :date_of_birth => params[:dob], :polio_1 => params[:p1], :polio_2 => params[:p2], :polio_3 => params[:p3], :polio_4 => params[:p4], :measles_1 => params[:m1], :measles_2 => params[:m1])
-      flash[:notice] = 'Sucesss! a new Child entry has been recorded.'
-      redirect_to nurse_mainpage_show_path
+      if params[:name].blank? || params[:family].blank? || params[:nurse].blank? || params[:dob].blank? || params[:p1].blank? || params[:p2].blank? || params[:p3].blank? || params[:p4].blank? || params[:m1].blank? || params[:m2].blank?
+        flash[:notice] = 'one or more fields are empty'
+        render 'new'
+      else
+        ChildInfo.create!(:name => params[:name], :cnic => session[:nurse_cnic], :family_number => params[:family],:nurse_name => params[:nurse], :date_of_birth => params[:dob], :polio_1 => params[:p1], :polio_2 => params[:p2], :polio_3 => params[:p3], :polio_4 => params[:p4], :measles_1 => params[:m1], :measles_2 => params[:m2])
+        flash[:notice] = 'Sucesss! a new Child entry has been recorded.'
+        redirect_to nurse_mainpage_show_path
+      end
     else
       flash[:notice] = 'It looks like you are not logged in. Please Log in First'
       redirect_to login_path

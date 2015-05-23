@@ -1,5 +1,5 @@
 %h2 Add Nurses to Database
-=form_tag("/nurse_info/new", method: "get") do
+=form_tag(nurse_info_create_path, method: "get") do
   =label_tag "Enter Nurse Information"
   %br
   %br
@@ -16,6 +16,6 @@
   =text_field_tag(:dob)
   %br
   =label_tag "Password"
-  =text_field_tag(:password)
+  =password_field_tag(:password)
   %br
-  =submit_tag("Submit")
+  =submit_tag("Sign Up!")

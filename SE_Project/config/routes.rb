@@ -52,6 +52,7 @@ SEProject::Application.routes.draw do
 
 
   get    'all_nurses' => 'nurse_info#show'
+  get    'nurse_info_create' => 'nurse_info#create'
   get    'login'   => 'sessions#new'
   post   'login_new'   => 'sessions#create'
   #delete 'logout'  => 'sessions#destroy'
