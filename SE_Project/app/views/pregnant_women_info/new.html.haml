@@ -1,0 +1,40 @@
+%h2 Add Pregnant Woman to Database
+=form_tag("/pregnant_women_info/new", method: "get") do
+  =label_tag "Enter Pregnant Woman Information"
+  %br
+  %br
+  =label_tag "Name"
+  =text_field_tag(:name)
+  %br
+  =label_tag "Family Number"
+  =text_field_tag(:family)
+  %br
+  =label_tag "TT1"
+  =text_field_tag(:tt1)
+  %br
+  =label_tag "TT2"
+  =text_field_tag(:tt2)
+  %br
+  =label_tag "First Checkup"
+  =text_field_tag(:c1)
+  %br
+  =label_tag "Second Checkup"
+  =text_field_tag(:c2)
+  %br
+  =label_tag "Third Checkup"
+  =text_field_tag(:c3)
+  %br
+  =label_tag "Fourth Checkup"
+  =text_field_tag(:c4)
+  %br
+  =label_tag "Hospital"
+  =text_field_tag(:hospital)
+  %br
+  =label_tag "Place of Birth"
+  =text_field_tag(:pob)
+  %br
+  =label_tag "Pregnancy Result"
+  =text_field_tag(:preg)
+  %br
+  %br
+  =submit_tag("Submit")

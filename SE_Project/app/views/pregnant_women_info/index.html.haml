@@ -1,0 +1,29 @@
+%h2 All Pregnant Women
+%table#women
+  %thead
+    %tr
+      %th Name
+      %th Family Number
+      %th TT1
+      %th TT2
+      %th First Checkup
+      %th Second Checkup
+      %th Third Checkup
+      %th Fourth Checkup
+      %th Hospital
+      %th Place of Birth
+      %th Pregnancy Result
+  %tbody
+    - @pw.each do |t|
+      %tr
+        %td= t.name
+        %td= t.family_number
+        %td= t.TT1
+        %td= t.TT2
+        %td= t.checkup1
+        %td= t.checkup2
+        %td= t.checkup3
+        %td= t.checkup4
+        %td= t.hospital
+        %td= t.place_of_birth
+        %td= t.result_pregnancy

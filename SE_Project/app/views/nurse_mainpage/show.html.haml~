@@ -1,0 +1,14 @@
+%h2 Welcome
+
+= @name
+
+= link_to "Logout", logout_path
+= link_to "Get Child Info", logout_path
+= link_to "Get Pregnant Women Info", logout_path
+= link_to "family Planning Info", logout_path
+
+= link_to "Add a Child", logout_path
+= link_to "Add a Pregnant Women", logout_path
+= link_to "Add a Family Planning", logout_path
+
+= link_to "Generate Monthly Report", logout_path

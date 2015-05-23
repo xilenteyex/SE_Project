@@ -1,7 +1,7 @@
 class ChildInfoController < ApplicationController
   def index
     @temp = "hello world"
-    @child = ChildInfo.where(:nurse_name => 'Abeera')
+    @child = ChildInfo.where(:nurse_name => params[:name])
     #puts @child
   end
   def new

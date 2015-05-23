@@ -1,4 +1,8 @@
 SEProject::Application.routes.draw do
+  get "pregnant_women_info/new"
+
+  get "famliy_planning_info/new"
+
   get "nurse_mainpage/show" => 'nurse_mainpage#show'
 
   get "sessions/new"
@@ -25,11 +29,36 @@ SEProject::Application.routes.draw do
   resources :nurse_info
   root :to => redirect('/nurse_info/new')
 
+  resources :pregnant_women_info
+  root :to => redirect('/pregnant_women_info')  
+
+  resources :pregnant_women_info
+  root :to => redirect('/pregnant_women_info/new')  
+
+
+  resources :famliy_planning_info
+  root :to => redirect('/famliy_planning_info')  
+
+  resources :famliy_planning
+  root :to => redirect('/famliy_planning_info/new')  
+
+
   get    'all_nurses' => 'nurse_info#show'
   get    'login'   => 'sessions#new'
   post   'login_new'   => 'sessions#create'
   #delete 'logout'  => 'sessions#destroy'
   get 'logout'  => 'sessions#destroy'
+  get 'child_info_show' => 'child_info#show'
+  get 'famliy_planning_info_show' => 'famliy_planning_info#show'
+  get 'pregnant_women_info_show' => 'pregnant_women_info#show'
+
+  get 'pregnant_women_info_new' => 'pregnant_women_info#new'
+  get 'famliy_planning_info_new' => 'famliy_planning_info#new'
+  
+  get 'child_info_new' => 'child_info#new'
+  get 'reports_index' => 'reports#index'
+
+  get 'nurse_info_new' => 'nurse_info#new'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

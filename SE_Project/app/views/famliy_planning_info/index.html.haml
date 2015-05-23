@@ -1,0 +1,19 @@
+%h2 All Families
+%table#families
+  %thead
+    %tr
+      %th Name
+      %th Husband Name
+      %th Family Number
+      %th Age
+      %th Method of Birth Control
+      %th Method Provided by
+  %tbody
+    - @fp.each do |t|
+      %tr
+        %td= t.name
+        %td= t.husband_name
+        %td= t.family_number
+        %td= t.age
+        %td= t.provided_by
+        %td= t.method

@@ -1,0 +1,24 @@
+%h2 Add Family to Database
+=form_tag("/famliy_planning_info/new", method: "get") do
+  =label_tag "Enter Family Information"
+  %br
+  %br
+  =label_tag "Name"
+  =text_field_tag(:name)
+  %br
+  =label_tag "Family Number"
+  =text_field_tag(:family)
+  %br
+  =label_tag "Husband Name"
+  =text_field_tag(:husband)
+  %br
+  =label_tag "Present Age"
+  =text_field_tag(:age)
+  %br
+  =label_tag "Birth Control Method"
+  =text_field_tag(:method)
+  %br
+  =label_tag "Method Provided by"
+  =text_field_tag(:provided_by)
+  %br
+  =submit_tag("Submit")
