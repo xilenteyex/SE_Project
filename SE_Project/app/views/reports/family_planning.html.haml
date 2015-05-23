@@ -1,0 +1,17 @@
+%h2 Family
+%table#Family
+  %thead
+    %tr
+      %th Name
+      %th Age
+      %th Husband Name
+      %th Method
+      %th Provider
+  %tbody
+    - @family.each do |t|
+      %tr
+        %td= t.name
+        %td= t.age
+        %td= t.husband_name
+        %td= t.method
+        %td= t.provided_by

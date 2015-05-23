@@ -77,6 +77,14 @@ class ReportsController < ApplicationController
                 end
 	end
 
+        def family_planning
+		if(params[:provider] == "Any")
+		  @family = FamliyPlanningInfo.where(nurse_cnic: session[:nurse_cnic], method: params[:contra])
+		else
+		  @family = FamliyPlanningInfo.where(nurse_cnic: session[:nurse_cnic],method: params[:contra], provided_by: params[:provider])	
+		end
+	end
+
 	def polio_report_result
 		@child = ChildInfo.find_by_name_and_cnic(session[:name],session[:nurse_cnic])
 		session[:name] = nil
